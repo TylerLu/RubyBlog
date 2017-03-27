@@ -85,7 +85,7 @@ setLatestNodeVersion(){
 # Deployment
 # ----------
 
-echo Ruby on Rails customized deployment.
+echo Ruby on Rails customized deployment - Tyler.
 
 # 1. KuduSync
 if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
