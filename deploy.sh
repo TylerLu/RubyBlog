@@ -111,7 +111,9 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
     bundle exec rake --trace assets:precompile
   fi
     
-  echo "bin/rails db:migrate"
+  echo "recreate database"
+  eval rm db/production.sqlite3
+  eval bin/rails db:create
   eval bin/rails db:migrate
   
   exitWithMessageOnError "precompilation failed"
