@@ -112,8 +112,8 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   fi
     
   echo "recreate database"
-  eval rm db/production.sqlite3
-  eval bin/rails db:create
+  #eval rm db/production.sqlite3
+  #eval bin/rails db:create
   eval bin/rails db:migrate RAILS_ENV=production
   
   exitWithMessageOnError "precompilation failed"
