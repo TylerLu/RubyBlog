@@ -3,9 +3,15 @@
 | 
 <a href="/articles/new">New Article</a>
 
-<br />
-<br />
-request.protocol: <%= request.protocol %>
 
+<hr />
+
+request.protocol: <%= request.protocol %>
 <br />
 request.headers["X-Forwarded-Proto"]: <%= request.headers["X-Forwarded-Proto"] %>
+<br />
+request.headers["X-Forwarded-Protocol"]: <%= request.headers["X-Forwarded-Protocol"] %>
+<br />
+request.headers["X-Forwarded-Ssl"]: <%= request.headers["X-Forwarded-Ssl"] %>
+<br />
+request.headers["X-Url-Scheme"]: <%= request.headers["X-Url-Scheme"] %>
