@@ -3,24 +3,14 @@
 | 
 <a href="/articles/new">New Article</a>
 
+<hr />
+
+<h2>HTTP_X_ARR_SSL</h2>
+request.headers["HTTP_X_ARR_SSL"]: <%= request.headers["HTTP_X_ARR_SSL"] %>
 
 <hr />
 
-request.protocol: <%= request.protocol %>
-<br />
-request.headers["X-Forwarded-Proto"]: <%= request.headers["X-Forwarded-Proto"] %>
-<br />
-request.headers["X-Forwarded-Protocol"]: <%= request.headers["X-Forwarded-Protocol"] %>
-<br />
-request.headers["X-Forwarded-Ssl"]: <%= request.headers["X-Forwarded-Ssl"] %>
-<br />
-request.headers["X-Url-Scheme"]: <%= request.headers["X-Url-Scheme"] %>
-
-<hr />
-<%= request.headers %>
-
-<hr />
-
+<h2>Request Headers<h2>
 <% request.each_header do |key, value| %>
     <p>
         <b><%= key %></b>
