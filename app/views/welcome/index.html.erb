@@ -18,3 +18,12 @@ request.headers["X-Url-Scheme"]: <%= request.headers["X-Url-Scheme"] %>
 
 <hr />
 <%= request.headers %>
+
+<hr />
+
+<% request.each_header do |key, value| %>
+    <p>
+        <b><%= key %></b>
+        <%= value %>
+    </p>
+<%end %>
